@@ -1,9 +1,10 @@
 export interface player {
   name: string;
 
-  club: string;
+  team: club;
   stats: abilities;
 }
+interface club {}
 interface abilities {
   precision: number;
 

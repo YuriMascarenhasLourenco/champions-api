@@ -1,14 +1,16 @@
 import { IsNumber, IsString } from 'class-validator';
 import { player } from '../types/player';
+import { club } from 'src/clubs/dto/club.dto';
 
 export class playerDto implements player {
   @IsString()
   name: string;
-  @IsString()
-  club: string;
+  team: club;
   stats: abilities;
 }
-class abilities {
+export class abilities {
+  @IsNumber()
+  id: number;
   @IsNumber()
   precision: number;
   @IsNumber()

@@ -10,14 +10,14 @@ import { Club } from './clubs/entities/clubs.entity';
     PlayersModule,
     ClubsModule,
     TypeOrmModule.forRoot({
-      type: 'postgres', // Ou 'mysql', 'sqlite', etc.
+      type: 'postgres',
       host: 'localhost',
-      port: 5432, // Ajuste conforme necessário
+      port: 5432,
       username: 'root',
       password: '1234',
       database: 'bomba-patch',
       entities: [Abilities, Player, Club],
-      synchronize: true, // Apenas para desenvolvimento (cria tabelas automaticamente)
+      synchronize: true, 
     }),
   ],
 })

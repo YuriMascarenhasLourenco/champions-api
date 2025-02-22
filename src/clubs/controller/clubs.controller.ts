@@ -5,7 +5,7 @@ import { ClubsService } from '../service/clubs.service';
 export class ClubsController {
   constructor(private readonly clubsService: ClubsService) {}
   @Get()
-  getAllClubs() {
-    return this.clubsService;
+  async getAllClubs() {
+    return await this.clubsService.getClubs();
   }
 }
